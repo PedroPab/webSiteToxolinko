@@ -18,54 +18,54 @@ export const Service: React.FC = () => {
     {
       icon: Link2,
       title: 'Integración ilimitada',
-      description: 'Conectamos todos tus formularios, tiendas y funnels sin límite',
+      description: 'Conecta Toxolinko con todas tus herramientas y sistemas existentes',
       features: [
-        'Shopify, WooCommerce, sitios propios',
-        'Formularios de contacto y landing pages', 
-        'Funnels de venta y lead magnets',
-        'Integraciones personalizadas'
+        'APIs REST ilimitadas',
+        'Webhooks en tiempo real',
+        'Integraciones nativas',
+        'Conectores personalizados'
       ],
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50'
-    },
-    {
-      icon: Settings,
-      title: 'Flujos 100% personalizados',
-      description: 'Configuramos todo según las necesidades específicas de tu negocio',
-      features: [
-        'Validación y limpieza de datos automática',
-        'Enrutamiento inteligente de leads',
-        'Campos personalizados y etiquetado',
-        'Reglas de negocio específicas'
-      ],
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50'
+      bgColor: 'bg-blue-100',
+      color: 'text-blue-600'
     },
     {
       icon: Smartphone,
-      title: 'Alertas inteligentes',
-      description: 'Notificaciones instantáneas configuradas exactamente como las necesitas',
+      title: 'App móvil incluida',
+      description: 'Aplicación nativa para iOS y Android completamente funcional',
       features: [
-        'WhatsApp, Telegram, SMS, Email',
-        'Filtros por valor, ciudad, campaña',
-        'Horarios y frecuencia personalizados',
-        'Plantillas de mensaje dinámicas'
+        'Interfaz nativa optimizada',
+        'Sincronización offline',
+        'Notificaciones push',
+        'Actualizaciones automáticas'
       ],
-      color: 'text-green-600',
-      bgColor: 'bg-green-50'
+      bgColor: 'bg-green-100',
+      color: 'text-green-600'
+    },
+    {
+      icon: Settings,
+      title: 'Configuración total',
+      description: 'Sistema completamente personalizable según tus necesidades',
+      features: [
+        'Campos personalizados',
+        'Reglas de negocio flexibles',
+        'Flujos de trabajo configurables',
+        'Interfaz adaptable'
+      ],
+      bgColor: 'bg-purple-100',
+      color: 'text-purple-600'
     },
     {
       icon: BarChart3,
-      title: 'Monitoreo continuo',
-      description: 'Supervisión 24/7 con corrección proactiva de problemas',
+      title: 'Analytics completos',
+      description: 'Dashboards y reportes avanzados para tomar decisiones',
       features: [
-        'Monitoreo de uptime y performance',
-        'Alertas automáticas de fallos',
-        'Corrección automática de errores',
-        'Reportes mensuales detallados'
+        'Dashboards interactivos',
+        'Reportes automáticos',
+        'Métricas en tiempo real',
+        'Exportación de datos'
       ],
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50'
+      bgColor: 'bg-orange-100',
+      color: 'text-orange-600'
     }
   ]
 
@@ -88,48 +88,52 @@ export const Service: React.FC = () => {
         >
           <div className="inline-flex items-center px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium mb-6">
             <Settings className="w-4 h-4 mr-2" />
-            Propuesta de Servicio
+            Servicio completo
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Todo lo que incluye ToxoLinko 🛠️
+            Todo lo que necesitas, <br />
+            <span className="text-primary-600">sin sorpresas</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            No solo conectamos tus plataformas, te entregamos un sistema completo 
-            funcionando y optimizado para tu negocio específico.
+            Toxolinko incluye absolutamente todo lo que necesitas para gestionar tus contaminantes. 
+            Sin costos ocultos, sin módulos adicionales, sin limitaciones.
           </p>
         </motion.div>
 
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="card hover:shadow-xl transition-all duration-300"
-            >
-              <div className="flex items-start space-x-4 mb-4">
-                <div className={`w-12 h-12 ${service.bgColor} rounded-full flex items-center justify-center flex-shrink-0`}>
-                  <service.icon className={`w-6 h-6 ${service.color}`} />
+          {services.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className={`w-12 h-12 ${service.bgColor} rounded-full flex items-center justify-center flex-shrink-0`}>
+                    <IconComponent className={`w-6 h-6 ${service.color}`} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
+                    
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start space-x-3">
+                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-gray-600">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                </div>
-              </div>
-              
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start space-x-3">
-                    <CheckCircle className="w-4 h-4 text-accent-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600 text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* What You Get */}
@@ -145,19 +149,22 @@ export const Service: React.FC = () => {
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {deliverables.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                className="text-center bg-white rounded-lg p-4 shadow-sm"
-              >
-                <item.icon className="w-8 h-8 text-primary-600 mx-auto mb-3" />
-                <p className="text-gray-700 font-medium text-sm">{item.text}</p>
-              </motion.div>
-            ))}
+            {deliverables.map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                  className="text-center bg-white rounded-lg p-4 shadow-sm"
+                >
+                  <IconComponent className="w-8 h-8 text-primary-600 mx-auto mb-3" />
+                  <p className="text-gray-700 font-medium text-sm">{item.text}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
