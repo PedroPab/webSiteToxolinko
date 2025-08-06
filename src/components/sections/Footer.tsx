@@ -46,7 +46,7 @@ export const Footer: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <CTAButton
                     whatsapp={{
-                      phone: "+57000000000",
+                      phone: "+573054489598",
                       message: "¡Hola! Quiero automatizar mis leads con ToxoLinko"
                     }}
                   >
@@ -97,11 +97,11 @@ export const Footer: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <MessageSquare className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">+57 (000) 000-0000</span>
+                  <span className="text-gray-300">+573054489598</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-blue-400" />
-                  <span className="text-gray-300">hola@toxolinko.com</span>
+                  <span className="text-gray-300">toxolinko@gmail.com</span>
                 </div>
                 <div className="mt-4">
                   <p className="text-sm text-gray-400">

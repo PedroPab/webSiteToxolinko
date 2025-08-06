@@ -171,7 +171,7 @@ export const Support: React.FC = () => {
           <CTAButton
             className="bg-white text-primary-600 hover:bg-gray-100"
             whatsapp={{
-              phone: "+57000000000",
+              phone: "+573054489598",
               message: "Hola! Quiero conocer más sobre el soporte de ToxoLinko"
             }}
           >

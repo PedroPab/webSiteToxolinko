@@ -78,7 +78,7 @@ export const Hero: React.FC = () => {
               <CTAButton
                 size="lg"
                 whatsapp={{
-                  phone: "+57000000000",
+                  phone: "+573054489598",
                   message: "¡Hola! Quiero automatizar mis leads con ToxoLinko"
                 }}
                 className="group"

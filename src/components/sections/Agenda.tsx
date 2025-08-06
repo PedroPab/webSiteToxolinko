@@ -93,7 +93,7 @@ export const Agenda: React.FC = () => {
                   variant="secondary"
                   className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600"
                   whatsapp={{
-                    phone: "+57000000000",
+                    phone: "+573054489598",
                     message: "¡Hola! Ya tengo claro mi proyecto y quiero empezar con ToxoLinko"
                   }}
                 >

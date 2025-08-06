@@ -20,7 +20,7 @@ export const Contact: React.FC = () => {
 Website: ${formData.website}
 Mensaje: ${formData.message}`
     
-    const phone = "+57000000000"
+    const phone = "+573054489598"
     const encodedMessage = encodeURIComponent(whatsappMessage)
     window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank')
   }
@@ -83,12 +83,12 @@ Mensaje: ${formData.message}`
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">WhatsApp</h4>
-                  <p className="text-gray-600 mb-2">+57 (000) 000-0000</p>
+                  <p className="text-gray-600 mb-2">+573054489598</p>
                   <CTAButton
                     variant="secondary"
                     size="sm"
                     whatsapp={{
-                      phone: "+57000000000",
+                      phone: "+573054489598",
                       message: "Hola! Quiero información sobre ToxoLinko"
                     }}
                   >
@@ -111,10 +111,10 @@ Mensaje: ${formData.message}`
                 <div>
                   <h4 className="font-semibold text-gray-900">Email</h4>
                   <a 
-                    href="mailto:hola@toxolinko.com" 
+                    href="mailto:toxolinko@gmail.com" 
                     className="text-blue-600 hover:underline"
                   >
-                    hola@toxolinko.com
+                    toxolinko@gmail.com
                   </a>
                 </div>
               </motion.div>
@@ -136,7 +136,7 @@ Mensaje: ${formData.message}`
                   <CTAButton
                     variant="secondary"
                     size="sm"
-                    href="tel:+57000000000"
+                    href="tel:+573054489598"
                   >
                     Llamar ahora
                   </CTAButton>

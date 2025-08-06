@@ -68,9 +68,9 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Phone className="w-4 h-4" />
-              <span>+57 300 123 4567</span>
+              <span>+573054489598</span>
             </div>
-            <CTAButton whatsapp={{ phone: '+573001234567', message: 'Hola, quiero automatizar mis leads con ToxoLinko' }}>
+            <CTAButton whatsapp={{ phone: '+573054489598', message: 'Hola, quiero automatizar mis leads con ToxoLinko' }}>
               Empezar Ahora
             </CTAButton>
           </div>
@@ -114,9 +114,9 @@ export const Navbar: React.FC = () => {
                 <div className="pt-4 border-t border-gray-200 space-y-3">
                   <div className="flex items-center space-x-2 text-sm text-gray-600">
                     <Phone className="w-4 h-4" />
-                    <span>+57 300 123 4567</span>
+                    <span>+573054489598</span>
                   </div>
-                  <CTAButton whatsapp={{ phone: '+573001234567', message: 'Hola, quiero automatizar mis leads con ToxoLinko' }}>
+                  <CTAButton whatsapp={{ phone: '+573054489598', message: 'Hola, quiero automatizar mis leads con ToxoLinko' }}>
                     Empezar Ahora
                   </CTAButton>
                 </div>
